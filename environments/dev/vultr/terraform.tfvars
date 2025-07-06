@@ -11,6 +11,6 @@ node_pools_labels = {
   cluster = "labs-infra-cluster"
 }
 
-#One thing to note is that all kubernetes resources have a default node pool with a tag of tf-vke-default. 
+# All kubernetes resources have a default node pool with a tag of tf-vke-default. 
 # In order to avoid errors, ensure that there is a node pool with that tag set.
 tag = "tf-vke-default"
