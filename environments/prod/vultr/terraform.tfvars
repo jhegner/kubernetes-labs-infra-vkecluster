@@ -10,3 +10,4 @@ node_pools_labels = {
     plan = "vc2-2c-4gb"
     cluster = "labs-infra-cluster"
 }
+tag = "production"

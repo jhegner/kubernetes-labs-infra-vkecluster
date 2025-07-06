@@ -33,3 +33,10 @@ variable "vpc_id" {
   type        = string
   
 }
+
+variable "tag" {
+  description = "The tag to apply to the Kubernetes cluster."
+  type        = string
+
+  
+}

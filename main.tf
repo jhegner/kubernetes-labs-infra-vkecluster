@@ -10,5 +10,5 @@ module "kubernetes_cluster" {
   node_pools_labels = var.node_pools_labels
   plan              = var.plan
   vpc_id            = data.vultr_vpc.cluster_vpc.id
-
+  tag               = var.tag
 }

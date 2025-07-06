@@ -23,3 +23,10 @@ variable "node_pools_labels" {
   type        = map(string)
 
 }
+
+
+variable "tag" {
+  description = "The tag to apply to the Kubernetes cluster."
+  type        = string
+  
+}
