@@ -25,6 +25,7 @@ This repository contains Terraform code and supporting scripts to provision and 
   - `cloud-network/`: Network resources for each cloud provider.
     - `gcp/` and `vultr/`: Provider-specific network modules.
   - `cluster/`: Module for provisioning Kubernetes clusters.
+    - `gcp/` and `vultr/`: Provider-specific Kubernetes clusters provisioning.
   - `node-group/`: Module for managing node groups within clusters.
   - `helm-charts/`: Module for deploying Helm charts to the cluster.
   - `addons/`: Module for additional cluster add-ons.

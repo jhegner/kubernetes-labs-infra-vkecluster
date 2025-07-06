@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"kubernetes-cluster","Source":"./modules/cluster/vultr","Dir":"modules/cluster/vultr"},{"Key":"kubernetes_cluster","Source":"./modules/cluster/vultr","Dir":"modules/cluster/vultr"}]}
