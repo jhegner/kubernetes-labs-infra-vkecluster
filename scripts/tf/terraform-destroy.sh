@@ -4,4 +4,4 @@ cd ../../
 
 echo "--- Executando terraform destroy ---"
 
-terraform destroy -var-file="./environments/dev/vultr/terraform.tfvars"
+terraform destroy -var-file="./environments/vultr/terraform.tfvars" -auto-approve
