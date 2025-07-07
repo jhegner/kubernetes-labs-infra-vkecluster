@@ -9,32 +9,30 @@ terraform {
 
 resource "vultr_kubernetes" "labs_cluster" {
   region          = var.region
+  vpc_id          = var.vpc_id
   label           = local.cluster_label
   version         = local.version
   enable_firewall = local.enable_firewall
-  vpc_id          = var.vpc_id
 
-  # IMPORTANT: A default node pool is required when first creating the resource but it can be removed at a later point.
-  # Para a primeira criação do cluster é necessário ter um node pool padrão.
-  # Depois de criar o cluster, descomentar o resource "vultr_kubernetes_node_pools" para gerenciar os node pools separadamente.
-  # É necessario ter um node pool ativo vinculado ao cluster
-  # Depois da criação do node pool adicionais. O node pool padrão pode ser removido depois de criar o cluster.
-  # Remova o node pool padrão por comentar o bloco abaixo. 
+  # Create a default node pool for development environment
   node_pools {
-    node_quantity = 1
-    plan          = "vc2-1c-2gb"
-    label         = "vke-default-first-creating"
-    auto_scaler   = false
+    node_quantity = var.dev_env.node_quantity
+    plan          = var.dev_env.plan
+    label         = var.dev_env.label
+    labels        = var.dev_env.labels
+    auto_scaler   = local.auto_scaler 
   }
 
 }
 
-# Create a Kubernetes cluster with a single node pool
+# Create a a node pool for production environment in the same cluster
 resource "vultr_kubernetes_node_pools" "labs_cluster_node_pools" {
   cluster_id    = vultr_kubernetes.labs_cluster.id
-  node_quantity = var.node_quantity
-  plan          = var.plan
-  label         = var.node_pools_label
-  labels        = var.node_pools_labels
-  tag           = var.tag
+  node_quantity = var.prod_env.node_quantity
+  plan          = var.prod_env.plan
+  label         = var.prod_env.label
+  labels        = var.prod_env.labels
+  tag           = var.prod_env.tag
+
+  depends_on = [ vultr_kubernetes.labs_cluster ]
 }
