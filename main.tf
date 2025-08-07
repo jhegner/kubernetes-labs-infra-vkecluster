@@ -2,7 +2,7 @@
 
 # Provision a Kubernetes cluster on Vultr using the specified configurations.
 module "kubernetes_cluster" {
-  source = "./modules/cluster/vultr"
+  source = "./modules/cluster"
   region = local.vultr_region
   vpc_id = data.vultr_vpc.cluster_vpc.id
   dev_env = {
