@@ -6,7 +6,7 @@ set -euo pipefail
 # -u: erro se variável não estiver definida
 # -o pipefail: detecta falha em qualquer parte do pipeline
 
-echo "█╗  ██╗ █████╗ ███████╗      ██╗      █████╗ ██████╗"
+echo "█╗  ██╗ █████╗ ███████╗       ██╗      █████╗ ██████╗"
 echo "██║ ██╔╝██╔══██╗██╔════╝      ██║     ██╔══██╗██╔══██╗"
 echo "█████╔╝ ╚█████╔╝███████╗█████╗██║     ███████║██████╔╝"
 echo "██╔═██╗ ██╔══██╗╚════██║╚════╝██║     ██╔══██║██╔══██╗"
@@ -70,16 +70,13 @@ echo "✅ Arquivo kubeconfig criado: ~/.kube/config-k8s-labs"
 
 # 6 - Exporta contexto
 export KUBECONFIG=~/.kube/config-k8s-labs
+source ~/.bashrc
 echo "✅ Contexto configurado"
-echo "export KUBECONFIG=~/.kube/config-k8s-labs"
-echo "source ~/.bashrc"
 
-echo "🎉 Configuração concluída com sucesso!"
-
-# Testa conexão
+# 7 - Testa conexão
 echo "🔎 Verificando acesso ao cluster..."
 kubectl get nodes
 echo "✅ Acesso ao cluster verificado com sucesso."
 
-
+echo "🎉 Configuração concluída com sucesso!"
 echo "🤖 Script gerado com ajuda de IA"
