@@ -14,7 +14,7 @@ resource "vultr_kubernetes" "labs_cluster" {
   version         = local.version
   enable_firewall = local.enable_firewall
 
-  # Create a default node pool for development environment
+  # Create a default node pool for lab environment
   node_pools {
     node_quantity = var.lab_env.node_quantity
     plan          = var.lab_env.plan
