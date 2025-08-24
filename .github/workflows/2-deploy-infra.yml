@@ -5,10 +5,11 @@ on:
 
 jobs:
   ci-feature:
-    uses: jhegner/kubernetes-labs-ci-workflows/.github/workflows/2-reusable-deploy-infra.yml@main
+    uses: jhegner/kubernetes-labs-ci-workflows/.github/workflows/2.1-reusable-deploy-infra.yml@main
     with:
       bucket-tf-backend-name: "kubernetes-labs-tf-backend-aws-s3bucket"
-      key-tf-backend-name: "lab/state/tf-kubernetes-cluster"
+      key-tf-backend-name: "lab/state/tf-infra-vkecluster"
+      have-workload-config-manifests: true
     secrets:
       VULTR_API_KEY: ${{ secrets.VULTR_API_KEY }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

@@ -102,6 +102,7 @@ O kubectl sempre usa o arquivo de configuração localizado em:
 ~/.kube/config
 
 Mesmo que você use kubectl config use-context, ele está operando dentro desse mesmo arquivo (a menos que você indique outro explicitamente).
+
 ✅ Como usar um kubeconfig alternativo localmente
 
 Se você criou um kubeconfig separado, por exemplo: ~/.kube/cloud-config, você tem duas opções para usá-lo:
