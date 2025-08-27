@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: kubernetes-labs
+  name: labs
   labels:
     projeto: projeto-lab-1
 spec: {}
