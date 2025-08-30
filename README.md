@@ -1,6 +1,6 @@
 # kubernetes-labs-infra-cluster
 
-Kubernetes Labs - Infra Cluster
+Kubernetes Labs - Infra Cluster.
 
 This repository contains Terraform code and supporting scripts to provision and manage Kubernetes infrastructure across multiple cloud providers (GCP and Vultr) for both development and production environments.
 

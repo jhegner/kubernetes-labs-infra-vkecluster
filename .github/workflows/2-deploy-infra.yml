@@ -5,7 +5,7 @@ on:
 
 jobs:
   ci-feature:
-    uses: jhegner/kubernetes-labs-ci-workflows/.github/workflows/2.1-reusable-deploy-infra.yml@develop
+    uses: jhegner/kubernetes-labs-ci-workflows/reusable/v3-deploy-infra.yml@develop
     with:
       bucket-tf-backend-name: "kubernetes-labs-tf-backend-aws-s3bucket"
       key-tf-backend-name: "lab/state/tf-infra-vkecluster"
