@@ -1,6 +1,6 @@
 # kubernetes-labs-infra-cluster
 
-Kubernetes Labs - Infra Cluster
+Kubernetes Labs - Infra Cluster.
 
 This repository contains Terraform code and supporting scripts to provision and manage Kubernetes infrastructure across multiple cloud providers (GCP and Vultr) for both development and production environments.
 
@@ -102,6 +102,7 @@ O kubectl sempre usa o arquivo de configuração localizado em:
 ~/.kube/config
 
 Mesmo que você use kubectl config use-context, ele está operando dentro desse mesmo arquivo (a menos que você indique outro explicitamente).
+
 ✅ Como usar um kubeconfig alternativo localmente
 
 Se você criou um kubeconfig separado, por exemplo: ~/.kube/cloud-config, você tem duas opções para usá-lo:

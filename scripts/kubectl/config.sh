@@ -63,15 +63,16 @@ export VKE_CLUSTER_KUBECONFIG_BASE64="$kubeconfig_base64"
 echo "✅ Variável de ambiente VKE_CLUSTER_KUBECONFIG_BASE64 configurada."
 
 # 5 - Cria arquivo de kubeconfig decodificado
-mkdir -p ~/.kube
-echo "$VKE_CLUSTER_KUBECONFIG_BASE64" | base64 -d > ~/.kube/config-k8s-labs
-chmod 600 ~/.kube/config-k8s-labs
-echo "✅ Arquivo kubeconfig criado: ~/.kube/config-k8s-labs"
+#mkdir -p ~/.kube
+echo "$VKE_CLUSTER_KUBECONFIG_BASE64" | base64 -d > ~/.kube/config
+#chmod 600 ~/.kube/config-k8s-labs
+#echo "✅ Arquivo kubeconfig criado: ~/.kube/config-k8s-labs"
+echo "✅ Arquivo kubeconfig configurado: ~/.kube/config"
 
 # 6 - Exporta contexto
-export KUBECONFIG=~/.kube/config-k8s-labs
-source ~/.bashrc
-echo "✅ Contexto configurado"
+#export KUBECONFIG=~/.kube/config-k8s-labs
+#source ~/.bashrc
+#echo "✅ Contexto configurado"
 
 # 7 - Testa conexão
 echo "🔎 Verificando acesso ao cluster..."
@@ -79,4 +80,4 @@ kubectl get nodes
 echo "✅ Acesso ao cluster verificado com sucesso."
 
 echo "🎉 Configuração concluída com sucesso!"
-echo "🤖 Script gerado com ajuda de IA"
+echo "Agora você pode usar o kubectl para gerenciar seu cluster Kubernetes no Vultr Cloud."
