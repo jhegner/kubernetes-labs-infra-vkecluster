@@ -1,0 +1,13 @@
+apiVersion: v2
+name: lab-workload
+description: Helm chart para provisionar as dependencias requeridas para o lab
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+dependencies:
+  - name: lab-namespaces
+    version: 0.1.0
+    repository: file://../deps/namespaces
+  - name: lab-secrets-eso
+    version: 0.1.0
+    repository: file://../deps/secrets-eso

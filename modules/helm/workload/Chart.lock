@@ -1,0 +1,9 @@
+dependencies:
+- name: lab-namespaces
+  repository: file://../deps/namespaces
+  version: 0.1.0
+- name: lab-secrets-eso
+  repository: file://../deps/secrets-eso
+  version: 0.1.0
+digest: sha256:1dcb53ca2959797158276698d1d97a74e44f7c7bef7b25ec37f04349492d0176
+generated: "2025-09-02T21:59:39.1401782-03:00"
