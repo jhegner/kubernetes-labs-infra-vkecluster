@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: "labs"
+  labels:
+    app.kubernetes.io/managed-by: "Helm"
+    kubernetes.io/metadata.name: "labs"
+    projeto: "lab-projeto-1"
+  annotations:
+    meta.helm.sh/release-name: "lab-infra-workload"
+    meta.helm.sh/release-namespace: "labs"
+spec: {}
+status: {}
