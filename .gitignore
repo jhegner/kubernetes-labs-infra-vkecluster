@@ -4,5 +4,6 @@
 .terraform.lock.hcl
 tfplan
 .terraform
-modules/helm/charts/*.tgz
-modules/helm/*.lock
+modules/helm/deps/*/*.tgz
+modules/helm/*/*.lock
+*.lock
