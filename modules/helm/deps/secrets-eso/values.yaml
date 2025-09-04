@@ -1,2 +1,5 @@
 name: secret-eso-awsiam-lab
 namespaceName: labs
+aws:
+  accessKeyId: "123"
+  secretAccessKey: "456"

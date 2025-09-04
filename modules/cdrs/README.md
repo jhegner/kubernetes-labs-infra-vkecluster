@@ -1,6 +1,6 @@
 # Recomendação de instalar os CDRs separados
 
-A instalação ocorrde forma imperativa na pipeline ou instale manualmente
+A instalação será realizada de forma imperativa na pipeline, por meio de arquivo bash ou instalada manualmente no ambiente local
 
 ```
 kubectl apply -f "https://raw.githubusercontent.com/external-secrets/external-secrets/v0.19.2/deploy/crds/bundle.yaml" --server-side
