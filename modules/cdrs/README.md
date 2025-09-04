@@ -1,3 +1,9 @@
+# Namespace principal
+
+A instalação será realizada de forma imperativa na pipeline, por meio de arquivo bash ou instalada manualmente no ambiente local
+
+
+
 # Recomendação de instalar os CDRs separados
 
 A instalação será realizada de forma imperativa na pipeline, por meio de arquivo bash ou instalada manualmente no ambiente local
