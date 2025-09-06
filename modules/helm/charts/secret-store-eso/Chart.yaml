@@ -1,0 +1,6 @@
+apiVersion: v2
+name: lab-secrets-store-eso
+description: Helm chart para criacao do secret store que abstrai o acesso ao provedor de segredos cloud
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
