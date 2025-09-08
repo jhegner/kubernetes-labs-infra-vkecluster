@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  namespace: {{ .Values.namespaceName }}
   name: {{ .Values.configmapName }}
 data:
     log_level: INFO
