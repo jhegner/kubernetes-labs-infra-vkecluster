@@ -91,6 +91,7 @@ This repository contains Terraform code and supporting scripts to provision and 
   * https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
 
 * Alguns comandos após configuração:
+
 ```
 kubectl config current-context --kubeconfig ~/.kube/config-labs # consulta o contexto corrente no arquivo informado
 ```
@@ -99,7 +100,9 @@ kubectl config current-context --kubeconfig ~/.kube/config-labs # consulta o con
 
 O kubectl sempre usa o arquivo de configuração localizado em:
 
+```
 ~/.kube/config
+```
 
 Mesmo que você use kubectl config use-context, ele está operando dentro desse mesmo arquivo (a menos que você indique outro explicitamente).
 
@@ -109,15 +112,19 @@ Se você criou um kubeconfig separado, por exemplo: ~/.kube/cloud-config, você 
 
 - Usar a variável de ambiente KUBECONFIG
 
+```
 export KUBECONFIG=~/.kube/cloud-config
 kubectl config use-context nome-do-contexto
 kubectl get pods
+```
 
 Isso instruirá o kubectl a olhar para esse outro arquivo, e não o ~/.kube/config.
 
 - Passar via flag --kubeconfig
 
+```
 kubectl --kubeconfig ~/.kube/cloud-config get pods
+```
 
 ⚠️ Importante
 
@@ -125,7 +132,9 @@ Rodar kubectl config use-context sem mudar o kubeconfig usado não terá efeito 
 
 Para tornar o novo arquivo permanente, você pode exportar o KUBECONFIG no seu ~/.bashrc, ~/.zshrc ou equivalente:
 
+```
 export KUBECONFIG=~/.kube/cloud-config
+```
 
 ---
 
@@ -170,15 +179,21 @@ contexts:
 
 🔹 Ver o contexto atual
 
+```
 kubectl config current-context
+```
 
 🔹 Listar todos os contextos
 
+```
 kubectl config get-contexts
+```
 
 🔹 Mudar de contexto
 
+```
 kubectl config use-context vultr-prod
+```
 
 🧱 Por que o contexto é importante?
 
@@ -187,5 +202,3 @@ kubectl config use-context vultr-prod
 - 📚 Organização e rastreabilidade	Permite logs e automações mais seguras e claras.
 - 🧪 Melhora o uso em CI/CD	Permite aplicar configs em clusters diferentes de forma programada.
 
-
-Dica _gerado por IA 🤖_

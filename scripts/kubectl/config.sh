@@ -63,18 +63,36 @@ export VKE_CLUSTER_KUBECONFIG_BASE64="$kubeconfig_base64"
 echo "✅ Variável de ambiente VKE_CLUSTER_KUBECONFIG_BASE64 configurada."
 
 # 5 - Cria arquivo de kubeconfig decodificado
-#mkdir -p ~/.kube
-echo "$VKE_CLUSTER_KUBECONFIG_BASE64" | base64 -d > ~/.kube/config
-#chmod 600 ~/.kube/config-k8s-labs
-#echo "✅ Arquivo kubeconfig criado: ~/.kube/config-k8s-labs"
-echo "✅ Arquivo kubeconfig configurado: ~/.kube/config"
+mkdir -p ~/.kube
+rm -f ~/.kube/config-labs
+touch ~/.kube/config-labs
 
-# 6 - Exporta contexto
-#export KUBECONFIG=~/.kube/config-k8s-labs
-#source ~/.bashrc
-#echo "✅ Contexto configurado"
+chmod 600 ~/.kube/config-labs
+echo "✅ Arquivo kubeconfig criado: ~/.kube/config-labs"
 
-# 7 - Testa conexão
+echo "$VKE_CLUSTER_KUBECONFIG_BASE64" | base64 -d > ~/.kube/config-labs
+echo "✅ Arquivo kubeconfig configurado: ~/.kube/config-labs"
+
+# 6 - Configura contexto
+echo "✨ Preparando entradas do kubeconfig"
+
+KUBECONFIG=~/.kube/config-minikube:~/.kube/config-labs \
+  kubectl config view --flatten > ~/.kube/config.merged
+mv ~/.kube/config.merged ~/.kube/config
+source ~/.bashrc
+
+echo "✅ Arquivo kubeconfig mesclado criado: ~/.kube/config"
+
+# 7 - Extrai o contexto do cluster lab e configura como contexto atual
+echo "🔧 Definindo contexto atual para o cluster lab..."
+cluster_lab_context=$(cat ~/.kube/config | yq -r '.contexts[] | select (.name | contains("vke")) | .name')
+
+echo "Contexto do cluster lab: $cluster_lab_context"
+
+kubectl config use-context "$cluster_lab_context"
+echo "✅ Contexto configurado"
+
+# 8 - Testa conexão
 echo "🔎 Verificando acesso ao cluster..."
 kubectl get nodes
 echo "✅ Acesso ao cluster verificado com sucesso."
