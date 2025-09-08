@@ -1,0 +1,6 @@
+apiVersion: v2
+name: secretstore-awsiam-credencial
+description: Helm chart para criacao do secret store que abstrai o acesso ao aws iam
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

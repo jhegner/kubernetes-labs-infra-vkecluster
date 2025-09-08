@@ -1,0 +1,11 @@
+apiVersion: v2
+name: lab-dep-addons
+description: Helm chart para provisionar addons
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+dependencies:
+  - name: external-secrets
+    version: 0.19.2
+    repository: https://charts.external-secrets.io
+    condition: external-secrets.enabled

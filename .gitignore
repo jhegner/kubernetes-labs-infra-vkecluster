@@ -7,3 +7,15 @@ tfplan
 modules/helm/deps/*/*.tgz
 modules/helm/*/*.lock
 *.lock
+# Local Helm config
+.helm/
+# Local Helm plugins
+.helm/plugins/
+# Local Helm repository cache
+.helm/repository/
+# Local Helm starter templates
+.helm/starters/
+# Local Helm history
+.helm/cache/
+# Local Helm generated files
+modules/helm/addons/charts/*/*.tgz

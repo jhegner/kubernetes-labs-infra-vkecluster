@@ -1,0 +1,4 @@
+namespaceName: labs
+region: us-east-1
+secretStoreName: secretstore-awsiam-credencial
+_awsIamCredencialName: awsiam-credencial

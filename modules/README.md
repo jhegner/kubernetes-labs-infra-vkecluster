@@ -1,6 +1,9 @@
-# Ordem de provisonamento
+# Ordem de provisonamento (pipe ou local)
 
 - cluster (terraform)
-- namespace (padrão do lab)
-- cdrs (para addons)
-- helm (charts de config do workload)
+- cdrs (para addons/helm)
+- helm (charts de config)
+  - configmap
+  - secrets
+  - addons
+  - workload

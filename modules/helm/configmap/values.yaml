@@ -1,0 +1,5 @@
+namespaceName: labs
+configmapName: configmap-labs
+labels:
+    projeto: "projeto-1"
+    env: "lab"

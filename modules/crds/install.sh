@@ -6,10 +6,12 @@ set -euo pipefail
 # -u: erro se variável não estiver definida
 # -o pipefail: detecta falha em qualquer parte do pipeline
 
-echo "🔨 Instalando CRDs do External Secrets Operator"
-echo ""
+echo "Nao há CRDs para instalar neste momento."
 
-kubectl apply -f "https://raw.githubusercontent.com/external-secrets/external-secrets/v0.19.2/deploy/crds/bundle.yaml" --server-side
+# Exemplo de instalação de CRD:
+# kubectl apply -f https://example.com/path/to/crd.yaml
+# kubectl wait --for=condition=established --timeout=60s crd/myresources.example.com
+# kubectl get crd myresources.example.com
+# echo "CRD 'myresources.example.com' instalada com sucesso."
 
-echo ""
-echo "✅ CRDs do External Secrets Operator instalados com sucesso."
+# Adicione aqui outros comandos de instalação de CRDs conforme necessário.
