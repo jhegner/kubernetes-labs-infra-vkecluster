@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/metadata.name: "labs"
     projeto: "lab-projeto-1"
   annotations:
-    meta.helm.sh/release-name: "lab-infra-workload"
-    meta.helm.sh/release-namespace: "labs"
+    meta.helm.sh/release-name: "lab-infra-workload" # necessario para referenciar no helm
+    meta.helm.sh/release-namespace: "labs" # necessario para referenciar no helm
 spec: {}
 status: {}

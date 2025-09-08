@@ -9,7 +9,7 @@ set -euo pipefail
 echo "🔨 Instalando Namespace principal do lab"
 echo ""
 
-kubectl apply -f ./modules/namespace/namespace-labs.yaml
+kubectl apply -f ./modules/namespace_lab/namespace.yaml
 
 echo ""
 echo "✅ Namespace criado com sucesso."

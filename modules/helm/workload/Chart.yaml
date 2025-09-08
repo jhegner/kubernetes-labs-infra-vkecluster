@@ -5,9 +5,6 @@ type: application
 version: 0.1.0
 appVersion: "0.1.0"
 dependencies:
-  - name: lab-secrets-eso
+  - name: secretstore-awsiam-credencial
     version: 0.1.0
-    repository: file://../secrets-eso
-  - name: lab-secrets-store-eso
-    version: 0.1.0
-    repository: file://../secret-store-eso
+    repository: file://../secretstore-awsiam-credencial
