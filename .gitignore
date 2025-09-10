@@ -4,8 +4,9 @@
 .terraform.lock.hcl
 tfplan
 .terraform
-modules/helm/deps/*/*.tgz
-modules/helm/*/*.lock
+*.lock
+*.tgz
+
 *.lock
 # Local Helm config
 .helm/
