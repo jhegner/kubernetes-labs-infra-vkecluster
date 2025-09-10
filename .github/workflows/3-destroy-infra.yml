@@ -10,6 +10,7 @@ jobs:
     with:
       bucket-tf-backend-name: "kubernetes-labs-tf-backend-aws-s3bucket"
       key-tf-backend-name: "lab/state/tf-infra-vkecluster"
+      needs-clean-cloud-resources: true
     secrets:
       VULTR_API_KEY: ${{ secrets.VULTR_API_KEY }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
