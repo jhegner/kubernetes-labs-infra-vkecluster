@@ -6,7 +6,7 @@ on:
 
 jobs:
   ci-feature:
-    uses: jhegner/kubernetes-labs-ci-workflows/.github/workflows/3-reusable-destroy-infra.yml@main
+    uses: jhegner/kubernetes-labs-ci-workflows/.github/workflows/3.1-reusable-destroy-infra.yml@develop
     with:
       bucket-tf-backend-name: "kubernetes-labs-tf-backend-aws-s3bucket"
       key-tf-backend-name: "lab/state/tf-infra-vkecluster"
