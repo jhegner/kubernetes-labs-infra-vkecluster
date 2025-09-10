@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configmapName }}
+  namespace: {{ .Values.namespaceName }}
+  labels:
+    projeto: projeto-1
+    team: devops
+    env: lab
+data:
+    log_level: INFO
+  
