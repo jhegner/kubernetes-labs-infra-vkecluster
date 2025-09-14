@@ -16,3 +16,4 @@ jobs:
       VULTR_API_KEY: ${{ secrets.VULTR_API_KEY }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      MOCKAPI_PROJECT_SECRET: ${{ secrets.MOCKAPI_PROJECT_SECRET }}
