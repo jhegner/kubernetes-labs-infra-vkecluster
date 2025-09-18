@@ -6,7 +6,9 @@ set -euo pipefail
 # -u: erro se variável não estiver definida
 # -o pipefail: detecta falha em qualquer parte do pipeline
 
-echo "Nao há CRDs para instalar neste momento."
+# echo "Nao há CRDs para instalar neste momento."
+
+echo "🚨 Iniciando a instalacao de CustomResourceDefinition no cluster"
 
 # Exemplo de instalação de CRD:
 # kubectl apply -f https://example.com/path/to/crd.yaml
@@ -15,3 +17,7 @@ echo "Nao há CRDs para instalar neste momento."
 # echo "CRD 'myresources.example.com' instalada com sucesso."
 
 # Adicione aqui outros comandos de instalação de CRDs conforme necessário.
+
+./1-cert-manager.sh
+
+echo "🚀 Finalizado a instalacao..."
