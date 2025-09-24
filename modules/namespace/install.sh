@@ -6,10 +6,10 @@ set -euo pipefail
 # -u: erro se variável não estiver definida
 # -o pipefail: detecta falha em qualquer parte do pipeline
 
-echo "🔨 Instalando Namespace principal do lab"
+echo "🔨 Instalando Namespaces principais do lab"
 echo ""
 
-kubectl apply -f ./modules/namespace/namespace-labs.yaml
+kubectl apply -f ./modules/namespace/all-namespaces.yaml
 
 echo ""
-echo "✅ Namespace criado com sucesso."
+echo "✅ Namespaces criados com sucesso."

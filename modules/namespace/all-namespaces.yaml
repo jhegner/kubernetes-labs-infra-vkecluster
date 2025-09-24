@@ -9,3 +9,14 @@ metadata:
     env: "lab"
 spec: {}
 status: {}
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: "newrelic"
+  labels:
+    app.kubernetes.io/managed-by: "Helm"
+    kubernetes.io/metadata.name: "newrelic"
+    projeto: "projeto-1"
+    env: "lab"
