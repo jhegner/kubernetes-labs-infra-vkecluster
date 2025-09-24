@@ -1,0 +1,24 @@
+newrelic-bundle:
+  global:
+    licenseKey: "123"
+    cluster: "kubernetes-labs-cluster"
+    lowDataMode: true
+
+  kube-state-metrics:
+    enabled: true
+    image:
+      tag: "v2.13.0"
+
+  kubeEvents:
+    enabled: true
+
+  newrelic-prometheus-agent:
+    enabled: true
+    lowDataMode: true
+    config:
+      kubernetes:
+        integrations_filter:
+          enabled: false
+
+  k8s-agents-operator:
+    enabled: true
