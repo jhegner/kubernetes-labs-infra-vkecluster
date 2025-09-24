@@ -1,0 +1,11 @@
+apiVersion: v2
+name: newrelic
+description: A Helm chart for newrelic observability platform
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+dependencies:
+  - name: nri-bundle
+    version: 6.0.14
+    repository: https://helm-charts.newrelic.com
+    alias: newrelic-bundle

@@ -20,3 +20,11 @@ tfplan
 .helm/cache/
 # Local Helm generated files
 modules/helm/addons/charts/*/*.tgz
+
+# keys
+*.pem
+*.key
+*.crt
+*.cert
+*.p12
+*.jks
